@@ -1,43 +1,31 @@
 import { useState } from 'react'
 import logo from './logo.svg'
-import './App.css'
+import './App.less'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+    <div className="workbench">
+      <div className="top-header"></div>
+      <div className="search-container">
+        <div className="input-warpper">
+          <input className='search-input' type="text" placeholder='输入关键词' />
+        </div>
+        <div className="fast-link">
+          <span>快捷导航</span>
+          <ul>
+            <li className='link'><a href="www.baidu.com">掘金</a></li>
+            <li className='link'><a href="www.baidu.com">百度</a></li>
+            <li className='link'><a href="www.baidu.com">知乎</a></li>
+          </ul>
+          <div className="more">···</div>
+        </div>
+      </div>
+      <main className="main-container">
+        <div className="l-area"></div>
+        <div className="c-area"></div>
+        <div className="r-area"></div>
+      </main>
     </div>
   )
 }
